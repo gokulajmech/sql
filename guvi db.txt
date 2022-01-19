@@ -1,0 +1,42 @@
+-- create table guvi_students(
+-- users_id int,
+-- codekata varchar(10),
+-- attendance varchar(1),
+-- topics varchar(30),
+-- tasks varchar(10),
+-- company_drives varchar(10),
+-- mentors varchar(15),
+-- students_activated_courses varchar(30),
+-- courses varchar(30));
+ 
+--  alter table guvi_students add user_name varchar(20);
+ -- insert into guvi_students values (1,'loop','y','node','zen assign','zoho','mohan','js',null,'gokul');
+ -- insert into guvi_students values (2,'operators','y','node','zen assign','zoho','mohan','js',null,'gokul');
+--  insert into guvi_students values (3,'js','y','node','zen assign','zoho','mohan','js','fullstack','gokul');
+--  insert into guvi_students values (4,'html','y','node','zen assign','zoho','mohan','js','mern stack','gokul');
+--  insert into guvi_students values (5,'css','y','node','zen assign','zoho','mohan','js',null,'gokul');
+
+-- get number problems solved in codekata by combining the users
+-- select users_id,count(*) from guvi_students
+-- where codekata is not null
+-- group by users_id;
+
+-- display the no of company drives attended by a user
+-- select users_id,count(*) from guvi_students
+-- where company_drives is not null
+-- group by users_id;
+
+select * from guvi_students;
+
+-- list all the mentors
+-- select distinct mentors from guvi_students;
+
+-- list the number of students that are assigned for a mentor
+
+select mentors,count(*) Std_count from guvi_students
+group by mentors;
+
+
+
+ 
+ 
